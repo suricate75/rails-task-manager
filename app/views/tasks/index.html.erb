@@ -1,0 +1,17 @@
+<h1>Tasks#index</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= task.name %>
+    <% task.description %>
+    <%= link_to "show", task_path(task)%>
+    <%= link_to "edit", task_path(task) %>
+
+    <%= link_to "Destroy", task_path(task), method:"delete" %>
+    </li>
+    <% end %>
+    </ul>
+
+
+
